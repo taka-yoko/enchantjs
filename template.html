@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>template</title>
+<script type="text/javascript" src="script/enchant.js"></script>
+<script>
+enchant();
+
+/*
+ * 定数
+ */
+//パラメータ
+var SCREEN_WIDTH = 320;
+var SCREEN_HEIGHT = 320;
+
+/*
+ * グローバル変数
+ */
+var game = null;
+
+/*
+ * 汎用処理
+ */
+//ランダム値生成
+var randfloat = function(min, max){
+	return Math.random() * (max - min) + min;
+};
+
+/*
+ * メイン処理
+ */
+window.onload = function(){
+	//ゲームオブジェクトの生成
+	game = new Game(SCREEN_WIDTH, SCREEN_HEIGHT);
+	
+	//ゲーム開始時の処理
+	game.onload = function(){
+		var scene = game.rootScene;
+		scene.backgroundColor = "black";					
+	};
+	
+	game.start();
+};
+
+
+
+
+</script>
+<style type="text/css">
+body { background-color: ffffff; font: 30px sans-serif; }
+</style>
+</head>
+<body>
+
+<canvas id='world'></canvas>
+
+</body>
+</html>
