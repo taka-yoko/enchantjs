@@ -3,5 +3,4 @@ enchantjs
 
 for enchantjs practice
 
-readmeを変更しました　ヨコヤマ
-
+readmeを変更しました
